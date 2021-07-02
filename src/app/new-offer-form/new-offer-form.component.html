@@ -1,0 +1,37 @@
+<form #f="ngForm" (ngSubmit)="createPost(f.value)">
+  <div class="form-group">
+    <label for="name">Tytuł ogłoszenia</label>
+    <input required="required" minlength="5" ngModel name="name" #name="ngModel" type="text" id="name" class="form-control" >
+    <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+        <div *ngIf="name.errors?.required">Tytuł ogłoszenia jest wymagany</div>
+        <div *ngIf="name.errors?.minlength">Tytuł ogłoszenia musi miec przynajmniej {{ name.errors?.minlength.requiredLength }} znaków</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="category">Kategoria</label>
+    <select required="required" ngModel name="category"  #category="ngModel" id="category" class="form-control">
+      <option value=""></option>
+      <option *ngFor="let c of categories" [value]="c.id"> {{ c.name}}</option>
+    </select>
+    <div *ngIf="category.touched && category.invalid" class="alert alert-danger">
+      Kategoria jest wymagana
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ogloszenie">Treść ogłoszenia</label>
+    <textarea required="required" minlength="10" ngModel name="ogloszenie" #ogloszenie="ngModel" id="ogloszenie" cols="10" rows="20" class="form-control"></textarea>
+    <div *ngIf="ogloszenie.touched && ogloszenie.invalid" class="alert alert-danger">
+      Treść ogłoszenia jest wymagana
+    </div>
+    <div *ngIf="ogloszenie.errors?.minlength" class="alert alert-danger">Ogłoszenia musi miec przynajmniej {{ ogloszenie.errors?.minlength.requiredLength }} znaków</div>
+  </div>
+
+  <div class="checkbox">
+    <label for="powiadomienia">
+    <input type="checkbox" id="powiadomienia">
+    Wysłać powiadomienie na email'a?
+    </label>
+  </div>
+  <button class="btn btn-primary" [disabled]="f.invalid">Dodaj</button>
+  <br>
+</form>

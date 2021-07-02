@@ -1,0 +1,13 @@
+.bi-heart-fill {
+  color: #ccc;
+  cursor: pointer;
+  size: auto;
+}
+
+.highlighted {
+  color: deeppink;
+}
+
+.icon-size{
+  font-size: 36px;
+}

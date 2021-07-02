@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "AngularJS (1.0.0)",
+      "releaseDate": "June 14th, 2012"
+    },
+    {
+      "id": 2,
+      "title": "Angular 2",
+      "releaseDate": "September 14, 2016"
+    },
+    {
+      "id": 3,
+      "title": "Angular 4",
+      "releaseDate": "March 23, 2017"
+    },
+    {
+      "id": 4,
+      "title": "Angular 5",
+      "releaseDate": "November 1, 2017"
+    },
+    {
+      "id": 5,
+      "title": "Angular 6",
+      "releaseDate": "May 4th, 2018"
+    },
+    {
+      "id": 6,
+      "title": "Angular 7",
+      "releaseDate": "October 18, 2018"
+    },
+    {
+      "id": 6,
+      "title": "Angular 8",
+      "releaseDate": "May 28, 2019"
+    },
+    {
+      "title": "sdfsdf",
+      "id": 7
+    },
+    {
+      "title": "vvdsvdv",
+      "id": 8
+    },
+    {
+      "title": "dfdf",
+      "id": 9
+    },
+    {
+      "title": "ffffff",
+      "id": 10
+    },
+    {
+      "title": "dfighdifh",
+      "id": 11
+    }
+  ],
+  "offers": [
+    {
+      "id": 1,
+      "name": "AngularJS (1.0.0)",
+      "category": "Sprzedam",
+      "ogloszenie": "sdfsdf"
+    },
+    {
+      "name": "proba nr2",
+      "category": "2",
+      "ogloszenie": "ja sie juz poddaje ",
+      "id": 2
+    },
+    {
+      "name": "fdgdfgdfgdf",
+      "category": "2",
+      "ogloszenie": "gfhfghsfhfgfg",
+      "id": 3
+    }
+  ]
+}

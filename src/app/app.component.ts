@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TablicaOgloszen';
+
+  tweet = {
+    body: '...',
+    likesCount: 10,
+    isLiked: true
+  }
 }

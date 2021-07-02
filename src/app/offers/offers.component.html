@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <li *ngFor="let offer of offers"
+    class="list-group-item col-md-5">
+    <div>
+    <h3 >{{ offer.name}}</h3>
+    <p >{{ offer.ogloszenie}}</p>
+    </div>
+    <like class="float-md-end"></like>
+  </li>
+</ul>

@@ -1,3 +1,4 @@
-li {
-  alignment: right;
+.list-group-item {
+  padding: 10px;
+  margin-bottom: 2px;
 }

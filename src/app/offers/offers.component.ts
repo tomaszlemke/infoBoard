@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
-import { Observable } from "rxjs";
-import {Config} from "../config/config.service";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Offer} from "./offer/offer";
 
 
@@ -11,12 +9,12 @@ import {Offer} from "./offer/offer";
   styleUrls: ['./offers.component.css']
 })
 export class OffersComponent implements OnInit {
-private url = 'http://localhost:3000/offers';
-offers: Offer[] = [];
-headers = new HttpHeaders({'Content-Type': 'application/json'});
+  private url = 'http://localhost:3000/offers';
+  offers: Offer[] = [];
+  headers = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) {
-    http.get<Offer[]>(this.url, {headers : this.headers})
+    http.get<Offer[]>(this.url, {headers: this.headers})
       .subscribe(response => {
         this.offers = response;
       })
@@ -25,4 +23,18 @@ headers = new HttpHeaders({'Content-Type': 'application/json'});
   ngOnInit(): void {
   }
 
+  convert(id: string) {
+    switch (id) {
+      case '1':
+        return "Kupię";
+      case '2':
+        return "Sprzedam";
+      case '3':
+        return "Zamienię";
+      case '4':
+        return "Oddam za darmo";
+      default:
+        return "Bląd";
+    }
+  }
 }

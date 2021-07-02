@@ -69,7 +69,7 @@
       "category": "2",
       "offerDetails": "gfhfghsfhfgfg",
       "id": 3,
-      "isSelected": false
+      "isSelected": true
     },
     {
       "name": "gzdfgzdfgzdfgzdf",
@@ -77,6 +77,12 @@
       "offerDetails": "zdfgzdfgzdfgzdfgzdfg",
       "id": 4,
       "isSelected": false
+    },
+    {
+      "name": "Próbna oferta #5",
+      "category": "1",
+      "ogloszenie": "dfgzdfgzdfgzdfgzdf",
+      "id": 5
     }
   ]
 }

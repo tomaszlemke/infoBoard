@@ -19,7 +19,6 @@ import { OffersComponent } from './offers/offers.component';
 import { SelectedOffersComponent } from './selected-offers/selected-offers.component';
 import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 import {OfferService} from "../services/offer.service";
-import { OfferComponent } from './test/offer.component';
 import { SingleOfferComponent } from './single-offer/single-offer.component';
 
 @NgModule({
@@ -37,7 +36,6 @@ import { SingleOfferComponent } from './single-offer/single-offer.component';
     HomeComponent,
     OffersComponent,
     SelectedOffersComponent,
-    OfferComponent,
     SingleOfferComponent,
   ],
   imports: [

@@ -2,12 +2,15 @@ export class Offer {
   id: number;
   name: string;
   category: string;
-  ogloszenie: string;
+  offerDetails: string;
+  isSelected: boolean;
 
-  constructor(id: number, name: string, category: string, ogloszenie: string) {
+
+  constructor(id: number, name: string, category: string, offerDetails: string, isSelected: boolean) {
     this.id = id;
     this.name = name;
     this.category = category;
-    this.ogloszenie = ogloszenie;
+    this.offerDetails = offerDetails;
+    this.isSelected = isSelected;
   }
 }

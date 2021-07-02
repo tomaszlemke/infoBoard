@@ -22,22 +22,7 @@ headers = new HttpHeaders({'Content-Type': 'application/json'});
       })
   }
 
-
-  /*createPost(input: HTMLInputElement) {
-    let post: any = { title: input.value}
-    input.value = '';
-
-    this.http.post(this.url, JSON.stringify(post),{headers: this.headers})
-      .subscribe(response => {
-        post.id = response;
-        post.title = response;
-        this.posts.splice(0,0,post.title)
-        console.log(response)
-      })
-  }*/
-
   ngOnInit(): void {
-
   }
 
 }

@@ -3,8 +3,11 @@
     class="list-group-item col-md-5">
     <div>
     <h3 >{{ offer.name}}</h3>
-    <p >{{ offer.ogloszenie}}</p>
+    <p >{{ offer.offerDetails}}</p>
     </div>
+    <a class="btn btn-dark" [routerLink]="['/offer/' ,offer.id]">
+      Szczegóły
+    </a>
     <like class="float-md-end"></like>
   </li>
 </ul>

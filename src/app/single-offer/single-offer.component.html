@@ -1,7 +1,11 @@
 <div *ngIf="offer" style="margin: auto">
-  <h2>{{offer.name}}</h2>
+  <h2>{{offer.name}}   <wybrana class="align-content-end " (click)="toggle(offer)"></wybrana>
+  </h2>
   <br>
-  <h4>Treść oferty: </h4><br>
-  <div style="margin: auto; border-radius: 10px; border: lightblue solid"><h4>{{offer.ogloszenie}}</h4></div>
+  <h4>Treść oferty:
+  </h4><br>
+  <div style="margin: auto; border-radius: 10px; border: lightblue solid"><h4>{{offer.offerDetails}}</h4></div>
 
 </div>
+<br>
+<button class="btn btn-primary " (click)="goBack()">Wróć</button>

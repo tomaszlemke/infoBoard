@@ -8,6 +8,8 @@ import {UsernameValidators} from "./username.validators";
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent {
+
+
   form = new FormGroup({
     username: new FormControl('', [
       Validators.required,
@@ -19,10 +21,7 @@ export class SignupFormComponent {
   })
 
   login() {
-    this.form.setErrors({
-      invalidLogin: false
-
-    });
+    console.log(this.form)
   }
   get username(){
     return this.form.get('username');

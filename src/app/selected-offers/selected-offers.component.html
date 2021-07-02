@@ -1,1 +1,15 @@
-<p>selected-offers works!</p>
+<ul class="list-group">
+  <li *ngFor="let offer of offers"
+      class="list-group-item col-md-5">
+   <div *ngIf="offer.isSelected" >
+    <div>
+      <h3 >{{ offer.name}}</h3>
+      <p >{{ offer.offerDetails}}</p>
+    </div>
+    <a class="btn btn-dark" [routerLink]="['/offer/' ,offer.id]">
+      Szczegóły
+    </a>
+    <like class="float-md-end"></like>
+   </div>
+  </li>
+</ul>

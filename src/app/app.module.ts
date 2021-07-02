@@ -18,7 +18,6 @@ import { HomeComponent } from './home/home.component';
 import { OffersComponent } from './offers/offers.component';
 import { SelectedOffersComponent } from './selected-offers/selected-offers.component';
 import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
-import {OfferService} from "../services/offer.service";
 import { SingleOfferComponent } from './single-offer/single-offer.component';
 
 @NgModule({
@@ -52,10 +51,10 @@ import { SingleOfferComponent } from './single-offer/single-offer.component';
       {path: 'offers', component: OffersComponent},
       {path: 'selected-offers', component: SelectedOffersComponent},
       {path: 'new-offer', component: NewOfferFormComponent},
-
+      {path: 'sign-up', component: SignupFormComponent},
     ]),
   ],
-  providers: [OfferService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

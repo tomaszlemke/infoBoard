@@ -14,7 +14,8 @@ export class SingleOfferComponent implements OnInit {
   private url = 'http://localhost:3000/offers';
   headers = new HttpHeaders({'Content-Type': 'application/json'});
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -24,4 +25,15 @@ export class SingleOfferComponent implements OnInit {
         .subscribe(offer => this.offer = offer);
     })
   }
+
+  goBack() {
+    this.router.navigate(['/offers'])
+  }
+  toggle(offer: Offer){
+    offer.isSelected =!offer.isSelected;
+    console.log(offer)
+    this.http.put<Offer>(this.url, offer)
+    .subscribe()
+  }
+
 }

@@ -58,22 +58,25 @@
   ],
   "offers": [
     {
-      "id": 1,
-      "name": "AngularJS (1.0.0)",
-      "category": "Sprzedam",
-      "ogloszenie": "sdfsdf"
-    },
-    {
       "name": "proba nr2",
       "category": "2",
-      "ogloszenie": "ja sie juz poddaje ",
-      "id": 2
+      "offerDetails": "ja sie juz poddaje ",
+      "id": 2,
+      "isSelected": true
     },
     {
       "name": "fdgdfgdfgdf",
       "category": "2",
-      "ogloszenie": "gfhfghsfhfgfg",
-      "id": 3
+      "offerDetails": "gfhfghsfhfgfg",
+      "id": 3,
+      "isSelected": false
+    },
+    {
+      "name": "gzdfgzdfgzdfgzdf",
+      "category": "2",
+      "offerDetails": "zdfgzdfgzdfgzdfgzdfg",
+      "id": 4,
+      "isSelected": false
     }
   ]
 }

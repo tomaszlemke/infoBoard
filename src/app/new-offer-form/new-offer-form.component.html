@@ -18,12 +18,15 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="ogloszenie">Treść ogłoszenia</label>
-    <textarea required="required" minlength="10" ngModel name="ogloszenie" #ogloszenie="ngModel" id="ogloszenie" cols="10" rows="15" class="form-control"></textarea>
-    <div *ngIf="ogloszenie.touched && ogloszenie.invalid" class="alert alert-danger">
+    <label for="offerDetails">Treść ogłoszenia</label>
+    <textarea required="required" minlength="10" ngModel name="offerDetails" #offerDetails="ngModel" id="offerDetails" cols="10" rows="15" class="form-control"></textarea>
+    <div *ngIf="offerDetails.touched && offerDetails.invalid" class="alert alert-danger">
       Treść ogłoszenia jest wymagana
     </div>
-    <div *ngIf="ogloszenie.errors?.minlength" class="alert alert-danger">Ogłoszenia musi miec przynajmniej {{ ogloszenie.errors?.minlength.requiredLength }} znaków</div>
+    <div *ngIf="offerDetails.errors?.minlength" class="alert alert-danger">Ogłoszenia musi miec przynajmniej {{ offerDetails.errors?.minlength.requiredLength }} znaków</div>
+  </div>
+  <div class="form-group">
+    <input type="hidden" [ngModel]=false name="isSelected" id="isSelected">
   </div>
   <br>
   <button class="btn btn-primary" [disabled]="f.invalid">Dodaj</button>

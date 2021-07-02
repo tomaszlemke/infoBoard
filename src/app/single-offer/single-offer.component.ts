@@ -12,7 +12,6 @@ export class SingleOfferComponent implements OnInit {
 
   offer?: Offer;
   private url = 'http://localhost:3000/offers';
-  headers = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient, private route: ActivatedRoute,
               private router: Router) {
@@ -34,6 +33,12 @@ export class SingleOfferComponent implements OnInit {
     console.log(offer)
     this.http.put<Offer>(this.url, offer)
     .subscribe()
+  }
+
+  deleteOffer(){
+     this.http.delete(this.url)
+       .subscribe()
+    this.router.navigate(['/offers'])
   }
 
 }

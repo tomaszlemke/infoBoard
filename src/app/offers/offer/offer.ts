@@ -6,7 +6,7 @@ export class Offer {
   isSelected: boolean;
 
 
-  constructor(id: number, name: string, category: string, offerDetails: string, isSelected: boolean) {
+  constructor(id: number, name: string, category: string, offerDetails: string, isSelected: boolean = false) {
     this.id = id;
     this.name = name;
     this.category = category;

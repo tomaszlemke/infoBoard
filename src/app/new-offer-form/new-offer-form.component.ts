@@ -29,7 +29,6 @@ export class NewOfferFormComponent {
   }
 
   createPost(input: HTMLInputElement) {
-
     this.http.post(this.url, JSON.stringify(input), {headers: this.headers})
       .subscribe(response => this.redirect())
   }

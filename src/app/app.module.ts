@@ -16,6 +16,7 @@ import { OffersComponent } from './offers/offers.component';
 import { SelectedOffersComponent } from './selected-offers/selected-offers.component';
 import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 import { SingleOfferComponent } from './single-offer/single-offer.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SingleOfferComponent } from './single-offer/single-offer.component';
     OffersComponent,
     SelectedOffersComponent,
     SingleOfferComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

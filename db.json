@@ -44,6 +44,20 @@
       "offerDetails": "Tekstu tak tylko troche bo juz pozno",
       "isSelected": true,
       "id": 5
+    },
+    {
+      "name": "Testowwwwweee ",
+      "category": "1",
+      "offerDetails": "fgbgfbfgbfgbfgbgf",
+      "isSelected": false,
+      "id": 6
+    },
+    {
+      "name": "Testowe # 9",
+      "category": "3",
+      "offerDetails": "fddfgdfgfdgdfgd",
+      "isSelected": false,
+      "id": 7
     }
   ]
 }

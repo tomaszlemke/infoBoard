@@ -17,6 +17,7 @@ import { SelectedOffersComponent } from './selected-offers/selected-offers.compo
 import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 import { SingleOfferComponent } from './single-offer/single-offer.component';
 import { FooterComponent } from './footer/footer.component';
+import {OfferListService} from "../services/offer-list.service";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { FooterComponent } from './footer/footer.component';
       {path: 'sign-up', component: SignupFormComponent},
     ]),
   ],
-  providers: [],
+  providers: [OfferListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

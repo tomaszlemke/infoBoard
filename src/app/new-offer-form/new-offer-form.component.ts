@@ -1,35 +1,37 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
-
+import {OfferListService} from "../../services/offer-list.service";
 
 @Component({
   selector: 'new-offer-form',
   templateUrl: './new-offer-form.component.html',
   styleUrls: ['./new-offer-form.component.css']
 })
-export class NewOfferFormComponent {
-  private url = 'http://localhost:3000/offers';
+export class NewOfferFormComponent implements OnInit{
   posts: any = [];
-  headers = new HttpHeaders({'Content-Type': 'application/json'});
 
   categories = [
     {id: 1, name: 'Kupię'},
     {id: 2, name: 'Sprzedam'},
     {id: 3, name: 'Zamienię'},
     {id: 4, name: 'Oddam za darmo'}
-
   ];
 
-  constructor(private http: HttpClient, private router: Router) {
-    http.get(this.url)
+  constructor(private http: HttpClient,
+              private router: Router,
+              private service: OfferListService) {
+  }
+
+  ngOnInit() {
+    this.service.getOffers()
       .subscribe(response => {
         this.posts = response;
       })
   }
 
   createPost(input: HTMLInputElement) {
-    this.http.post(this.url, JSON.stringify(input), {headers: this.headers})
+    this.service.addPost(input)
       .subscribe(response => this.redirect())
   }
 

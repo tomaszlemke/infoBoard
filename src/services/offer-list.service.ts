@@ -16,7 +16,16 @@ export class OfferListService {
     return this.http.get<Offer>(this.url)
   }
 
-  addPost(input: any): Observable<Offer>{
+  getSingeOffer(newpath: any): Observable<Offer>{
+    return this.http.get<Offer>(newpath)
+  }
+
+  addOffer(input: any): Observable<Offer>{
     return this.http.post<Offer>(this.url, JSON.stringify(input), {headers: this.headers})
   }
+
+  deleteOffer(newpath: any){
+   return this.http.delete(newpath)
+  }
+
 }

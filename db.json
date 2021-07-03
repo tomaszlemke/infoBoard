@@ -32,13 +32,6 @@
       "isSelected": true
     },
     {
-      "name": "dfvdfvzdfvzdf",
-      "category": "1",
-      "offerDetails": "dfbdfbdfbdfbdf",
-      "isSelected": false,
-      "id": 4
-    },
-    {
       "name": "Przykladowe ogloszenie",
       "category": "4",
       "offerDetails": "Tekstu tak tylko troche bo juz pozno",
@@ -56,7 +49,7 @@
       "name": "Testowe # 9",
       "category": "3",
       "offerDetails": "fddfgdfgfdgdfgd",
-      "isSelected": false,
+      "isSelected": true,
       "id": 7
     }
   ]

@@ -14,13 +14,13 @@ export class OffersComponent implements OnInit {
   headers = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) {
-    http.get<Offer[]>(this.url, {headers: this.headers})
-      .subscribe(response => {
-        this.offers = response;
-      })
   }
 
   ngOnInit(): void {
+    this.http.get<Offer[]>(this.url, {headers: this.headers})
+      .subscribe(response => {
+        this.offers = response;
+      })
   }
 
   convert(id: string) {

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Offer} from "../offers/offer/offer";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
+import {OfferListService} from "../../services/offer-list.service";
 
 @Component({
   selector: 'app-single-offer',
@@ -14,13 +15,13 @@ export class SingleOfferComponent implements OnInit {
   private url = 'http://localhost:3000/offers';
 
   constructor(private http: HttpClient, private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router, private service: OfferListService) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.url += "/" + params['id'];
-      this.http.get<Offer>(this.url)
+      this.service.getSingeOffer(this.url)
         .subscribe(offer => this.offer = offer);
     })
   }
@@ -30,13 +31,12 @@ export class SingleOfferComponent implements OnInit {
   }
   toggle(offer: Offer){
     offer.isSelected =!offer.isSelected;
-    console.log(offer)
     this.http.put<Offer>(this.url, offer)
     .subscribe()
   }
 
   deleteOffer(){
-     this.http.delete(this.url)
+     this.service.deleteOffer(this.url)
        .subscribe()
     this.router.navigate(['/offers'])
   }

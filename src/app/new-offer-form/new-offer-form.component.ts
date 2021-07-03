@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {OfferListService} from "../../services/offer-list.service";
 
@@ -31,7 +31,7 @@ export class NewOfferFormComponent implements OnInit{
   }
 
   createPost(input: HTMLInputElement) {
-    this.service.addPost(input)
+    this.service.addOffer(input)
       .subscribe(response => this.redirect())
   }
 
